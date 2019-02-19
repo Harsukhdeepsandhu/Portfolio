@@ -1,3 +1,81 @@
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .home-image {
+        width: 15vw !important;
+    }
+
+    .skills-container {
+        width: 50vw !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .nav-fix{
+        display: initial !important;
+    }
+
+    .home-image {
+        width: 20vw !important;
+    }
+
+    .skills-container {
+        width: 60vw !important;
+    }
+
+    .project-container{
+        margin-left: 10% !important;
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .nav-fix{
+        display: initial !important;
+    }
+
+    .home-image {
+        width: 25vw !important;
+    }
+
+    .skills-container {
+        width: 90vw !important;
+    }
+
+    .project-container{
+        margin-left: 10% !important;
+        width: 80% !important;
+    }
+
+    form{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+     .nav-fix{
+        display: initial !important;
+    }
+
+    .home-image {
+        width: 40vw !important;
+    }
+
+    .skills-container {
+        width: 90vw !important;
+        height: 80vh !important;
+    }
+
+    .project-container{
+        margin-left: 10% !important;
+        width: 80% !important;
+    }
+
+    form{
+        width: 100% !important;
+        margin-left: 0% !important;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -44,4 +122,35 @@ body {
 
 iframe {
     height: 30vh;
+}
+
+.contact-page{
+    background: url(/images/contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+form{
+    background: black;
+    width: 44%;
+    margin-left: 28%;
+    color: white;
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+form button{
+    width: 24%;
+    margin-left: 38%;
+}
+
+.form-group{
+    margin-left: 10%;
+    width: 80%;
+}
+
+.page-footer{
+    color: white
 }

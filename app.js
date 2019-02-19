@@ -1,5 +1,5 @@
 var homePage, height, width, homeContainer, aboutPage, header, portfolioPage, contactPage, skillName;
-var skillsContainer, skillNameLevel, projectContainer;
+var skillsContainer, skillNameLevel, contactContent;
 var skillStatus = ["80", "70", "65", "35", "70", "35", "30", "30", "40", "60", "70"];
 var firstDisplay = true;
 
@@ -15,14 +15,14 @@ function varInit() {
     skillsContainer = document.getElementById('skills-container');
     skillName = document.getElementsByClassName('skill-name');
     skillNameLevel = document.getElementsByClassName('skill-name-level');
-    projectContainer = document.getElementsByClassName('project');
+    contactContent = document.getElementById('contact-content');
     functionInit();
 }
 
 function functionInit() {
     divHeight();
     homeContainerPos();
-    portfolioCenter();
+    contactDimesions();
 }
 
 function divHeight() {
@@ -32,7 +32,7 @@ function divHeight() {
 
 function homeContainerPos() {
     var containerHeight = homeContainer.clientHeight;
-    var paddingTop = (height - containerHeight) / 4;
+    var paddingTop = (height - containerHeight) / 2 + elementSize(header);
     homeContainer.style.paddingTop = paddingTop + "px";
 }
 
@@ -69,19 +69,6 @@ function skillProgress(skill, skillStatus) {
     }, 10);
 }
 
-function portfolioCenter() {
-    if (width < 991.8) {
-        for (var i = 0; i < projectContainer.length; i++) {
-            var marginLeft = (width - projectContainer[i].clientWidth) / 2;
-            projectContainer[i].style.marginLeft = marginLeft + "px";
-        }
-    } else {
-        for (var i = 0; i < projectContainer.length; i++) {
-            projectContainer[i].style.marginLeft = 0 + "px";
-        }
-    }
-}
-
 window.addEventListener('scroll', scrollProgress);
 
 function scrollProgress() {
@@ -94,6 +81,17 @@ function scrollProgress() {
 
 function elementSize(element) {
     return element.clientHeight;
+}
+
+function contactDimesions() {
+    var contactHeight = height - elementSize(header);
+    if (contactHeight > 650) {
+        contactPage.style.height = contactHeight + "px";
+    } else {
+        contactPage.style.height = "650px";
+    }
+    var marginTop = (contactHeight - contactContent.clientHeight) / 2;
+    contactContent.style.marginTop = marginTop + "px";
 }
 
 function redirectToDiv(page) {
@@ -123,7 +121,7 @@ window.onresize = () => {
     divHeight();
     homeContainerPos();
     skillNameHeight();
-    portfolioCenter();
+    contactDimesions();
 }
 
 varInit();
