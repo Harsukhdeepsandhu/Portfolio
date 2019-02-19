@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harsukhdeep Sandhu</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <!-- <div id="contact-widget" class="contact-widget">
+        <h5 class="text-center">Contact Me!</h5>
+        <form>
+            <div class="form-group">
+                <label>Name: </label>
+                <input type="text" class="form-control" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label>Email address: </label>
+                <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label>Subject: </label>
+                <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group">
+                <label>Message: </label>
+                <textarea placeholder="Message" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div> -->
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+        <div class="container">
+            <div class="navbar-header d-flex justify-content-around">
+                <a href="#homePage" class="nav-item">
+                    <button type="button" class="btn btn-light btn-lg">
+                        Harsukhdeep Sandhu
+                    </button>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-items-right">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="nav-items-right">
+                <div class="navbar-nav">
+                    <a onclick="redirectToDiv('home-page')" class="nav-item">
+                        <button type="button" class="btn btn-light btn-lg">
+                            HOME
+                        </button>
+                    </a>
+                    <a onclick="redirectToDiv('about-page')" class="nav-item">
+                        <button type="button" class="btn btn-light btn-lg">
+                            ABOUT
+                        </button>
+                    </a>
+                    <a onclick="redirectToDiv('portfolio-page')" class="nav-item">
+                        <button type="button" class="btn btn-light btn-lg">
+                            PORTFOLIO
+                        </button>
+                    </a>
+                    <a onclick="redirectToDiv('contact-page')" class="nav-item">
+                        <button type="button" class="btn btn-light btn-lg">
+                            CONTACT
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="home-page" id="home-page">
+        <div class="home-container container" id="home-container">
+            <img src="images/home-emoji.png" alt="home" class="home-image mx-auto d-block">
+            <h1 class="text-center">
+                Hello, my name is <strong class="orange-color ">Harsukhdeep Sandhu</strong>
+                <br />
+                I am a web developer.
+            </h1>
+            <div class="container">
+                <div class="justify-content-around d-flex">
+                    <a class="text-center orange-color" href="https://www.facebook.com/harsukhdeepsandhu" target="_blank">
+                        <i class="fa fa-facebook fa-3x"></i>
+                    </a>
+                    <a class="text-center orange-color" href="https://www.instagram.com/harsukhdeepsandhu" target="_blank">
+                        <i class="fa fa-instagram fa-3x"></i>
+                    </a>
+                    <a class="text-center orange-color" href="https://www.github.com/harsukhdeepsandhu" target="_blank">
+                        <i class="fa fa-github fa-3x"></i>
+                    </a>
+                    <a class="text-center orange-color" href="https://www.linkedin.com/in/harsukhdeep-sandhu" target="_blank">
+                        <i class="fa fa-linkedin fa-3x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="home-canvas"></canvas>
+
+    <div class="about-page" id="about-page">
+        <h1 class="text-center">ABOUT</h1>
+        <br />
+        <div class="container">
+            <h3>
+                I am <strong class="orange-color">Harsukhdeep Sandhu</strong>
+                , enthusiast developer, who loves trying out new technologies and
+                learning new things everyday. I am curious about
+                few things in life like Astrophysics. I am born
+                in <strong class="orange-color">India</strong> and currently
+                living in <strong class="orange-color">Canada</strong>.
+            </h3>
+        </div>
+        <br />
+        <div class="container skills-container" id="skills-container">
+            <div class="skill-name">
+                <h5>HTML</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>CSS</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>JS</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>REACT</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>BOOTSTRAP</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>PHP</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>NODE JS</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>EXPRESS</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>PYTHON</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>SQL</h5>
+                <div class="skill-name-level"></div>
+            </div>
+            <div class="skill-name">
+                <h5>JAVA</h5>
+                <div class="skill-name-level"></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="portfolio-page" id="portfolio-page">
+        <h1 class="text-center">PORTFOLIO</h1>
+        <br />
+        <div class="container">
+            <div class="justify-content-around d-lg-flex d-none">
+                <div class="project-container">
+                    <h5 class="text-center">This is my old Portfolio created using vanilla JS. It was
+                        created 6 months prior to this portfolio.
+                    </h5>
+
+                </div>
+                <div class="project-container">
+                    <h5 class="text-center">Winnipeg based insurance broker's website created using vanilla JS</h5>
+                </div>
+            </div>
+            <div class="justify-content-around d-md-block d-lg-flex">
+                <div class="project-container project">
+                    <h5 class="text-center d-lg-none">This is my old Portfolio created using vanilla JS. It was
+                        created 6 months prior to this portfolio.
+                    </h5>
+                    <iframe src="http://hsandhu.ca/" frameborder="0" width="100%"></iframe>
+                </div>
+                <div class="project-container project">
+                    <h5 class="text-center d-lg-none">Winnipeg based insurance broker's website created using vanilla
+                        JS</h5>
+                    <iframe src="http://singhteamcanada.ca/" frameborder="0" width="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-page" id="contact-page">
+        <h1 class="text-center">Contact</h1>
+        hello<br />world
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+    </div>
+    <h1>hello</h1>
+
+    <script src="app.js"></script>
+    <script src="canvas.js"></script>
+
+</body>
+
+</html>
